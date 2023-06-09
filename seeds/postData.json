@@ -1,0 +1,19 @@
+[
+    {
+        "postHeader": "Why learn JavaScript",
+        "postText": "As the only programming language native to web browsers, JavaScript is used all over the web—making it a crucial skill in your toolbox. But Javascript development skills are also versatile. Once you have mastered JavaScript, it is much easier to learn the fundamentals of other programming languages."
+    },
+    {
+        "postHeader": "Release of Node.js",
+        "postText": "Once you learn JavaScript, Node.js makes learning a second programming language, like PHP, to write server-side code unnessary"
+    },
+    {
+        "postHeader": "Whats so good about express.js",
+        "postText": "Express.js is a lightweight and flexible web application framework for Node.js. It provides a minimalistic approach that allows developers to build web applications and APIs with ease. Express.js offers easy routing for handling HTTP requests, supports middleware for adding additional functionality, and integrates well with the Node.js ecosystem."
+    },
+    {
+        "postHeader": "A wonders that is Sequelize",
+        "postText": "Sequelize is a remarkable ORM library for Node.js that simplifies working with databases. It allows developers to interact with databases using JavaScript and offers a user-friendly API for common database operations. With advanced features like association management and transaction support, Sequelize streamlines database management, making it an indispensable tool for building efficient applications."
+    }
+]
+    
