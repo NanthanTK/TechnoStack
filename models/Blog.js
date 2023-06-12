@@ -3,10 +3,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Create Task model by extending the Sequelize Model class
-class Post extends Model {}
+class Blog extends Model {}
 
 // Initialize Task model with column definitions and options
-Post.init(
+Blog.init(
   {
     // Define the 'id' column
     id: {
@@ -26,7 +26,7 @@ Post.init(
         allowNull: false,
     },
     // Define the 'CreatedAt' column
-    CreatedAt: {
+    createdAt: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW,
@@ -46,9 +46,9 @@ Post.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'blog',
   }
 );
 
-// Export the Post model
-module.exports = Post;
+// Export the Blog model
+module.exports = Blog;

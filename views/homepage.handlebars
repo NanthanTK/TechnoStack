@@ -1,0 +1,23 @@
+<section class="p-5 d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Loop over each object in the posts array -->
+      {{#each blogs as |blog| }}
+      <div class="col-10 mb-3">
+        <div class="card w-100 mx-auto px-0">
+          <div class="col-12">
+            <div class="card-body">
+              <a class="card-title no-underline bigger-title" href="/blog/{{blog.id}}">
+                <span class="primary-text">{{blog.postHeader}}</span>
+              </a>
+              <p class="card-text">{{blog.postText}}</p>
+              <p class="card-text"><small class="text-muted">Created by {{blog.user.name}} on {{format_date
+                  blog.createdAt}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

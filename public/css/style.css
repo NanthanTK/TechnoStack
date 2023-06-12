@@ -1,0 +1,45 @@
+* {
+   box-sizing: border-box;
+ }
+ 
+
+
+section {
+   padding: 20px 0; 
+}
+
+.btn{
+   width: 80%;
+   height: 35px;
+   padding: 0;
+   margin: 25px;
+}
+
+.themeBg{
+   background: rgb(219, 240, 240)
+   
+}
+#headerText{
+   font-weight: bolder;
+}
+.navbar-logo {
+   height: 3rem; /* Adjust the height as needed */
+   width: auto; /* Maintain aspect ratio */
+   margin-right: 0.5rem; /* Optional: Add some spacing between the logo and the brand name */
+ }
+ .card-title.no-underline {
+   text-decoration: none;
+ }
+
+ .card-title.bigger-title {
+   font-size: 1.5rem;
+ }
+ .card-title.primary-bg {
+   background-color: #007bff;
+   color: white;
+   padding: 10px;
+   border-radius: 5px;
+ }
+ .primary-text {
+   color: #007bff;
+ }

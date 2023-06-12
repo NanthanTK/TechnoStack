@@ -1,0 +1,24 @@
+<section class="p-5 d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="text-left">
+        <div class="col-10 mb-3">
+          <div class="card w-100 mx-auto px-0">
+            <div class="col-12">
+              <div class="card-body">
+                <h2>{{postHeader}}</h2>
+                <p>{{postText}}</p>
+                <p>Created by {{user.name}} on {{format_date createdAt}}</p>
+                <h3>Comments</h3>
+                {{#each comments as |comment| }}
+                <p>{{commentText}}</p>
+                <p>by {{user}} on {{format_date CreatedAt}}</p>               
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
