@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { restart } = require('nodemon');
 const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -50,6 +51,7 @@ router.get('/blog/:id', async (req, res) => {
       ...blog,
       logged_in: req.session.logged_in
     });
+    // res.json(blog)
   } catch (err) {
     res.status(500).json(err);
   }
