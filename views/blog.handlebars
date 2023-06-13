@@ -9,16 +9,30 @@
                 <h2>{{postHeader}}</h2>
                 <p>{{postText}}</p>
                 <p>Created by {{user.name}} on {{format_date createdAt}}</p>
+                {{#if logged_in}}
+                <div class="button-container">
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-primary">Delete</button>
+                </div>
+                {{/if}}
                 <h3>Comments</h3>
                 {{#each comments as |comment| }}
-                <p>{{commentText}}</p>
-                <p>by {{user}} on {{format_date CreatedAt}}</p>               
+                  <p>{{commentText}}</p>
+                  <p>by {{comment.user.name}} on {{format_date CreatedAt}}</p>               
                 {{/each}}
+                {{#if logged_in}}
+                <div class="form-group comment-input-container">
+                  <textarea class="form-control" name="newComment" rows="4" placeholder="Enter your comment"></textarea>
+                </div>
+                <div class="text-center mt-2">
+                  <button class="btn btn-sm btn-primary">Add Comment</button>
+                </div>
+                {{/if}}
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </section>
-
-
