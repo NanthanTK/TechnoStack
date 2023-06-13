@@ -29,23 +29,19 @@ router.get('/', async (req, res) => {
 
 router.get('/blog/:id', async (req, res) => {
   try {
-    const blogData = await Blog.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],          
-        },
-        {
-          model: Comment,
-          attributes: ['commentText', 'CreatedAt'],
-          include: [
-            {
-              model: User,
-              attributes: ['name'],            
-            },
-          ],
-        },
-      ],
+    const blogData = await Blog.findOne({
+			Where : {id:req.params.id},
+	      include: [
+	        {
+	          model: Comment,
+	          include: 
+	            {
+	              model: User,
+	              attributes: ['name'],            
+	            },
+	         
+	        },
+	      ],
     });
 
     const blog = blogData.get({ plain: true });

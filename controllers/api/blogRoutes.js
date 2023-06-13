@@ -2,9 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/newPost', function(req, res) {
-    logged_in = true; 
-    res.render('newPost');
+router.get('/newPost', function(req, res) {    
+    res.render('newPost', { logged_in: req.session.logged_in });
   });
 
 //route to create post
